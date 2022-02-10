@@ -5,7 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 각종메타 -->
+    <meta name="description" content="메가박스 반응형 클론 웹페이지">
+    <meta name="keywords" content="mega, 메가박스, 영화, 박스오피스, movie, boxOffice">
+    <meta name="author" content="an jonghoon">
 
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://github.com/gns11/megabox/blob/main/images/logo.png">
+    <meta property="og:title" content="메가박스">
+    <meta property="og:description" content="여기를 눌러 링크를 확인하세요">
+    <meta property="og:url" content="https://gns11.github.io/megabox/">
 
 
     <!-- favicon -->
@@ -690,7 +698,7 @@
             overflow: hidden;
             filter: grayscale(1) opacity(0.5);
             transition: 0.3s;
-
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
         }
 
         .megainfo-list ul li:hover{
@@ -701,7 +709,7 @@
             margin: 40px 0;
             border-top: 1px solid rgba(0,0,0,0.3);
             border-bottom: 1px solid rgba(0,0,0,0.3);
-            padding: 30px 0;
+            padding: 16px 0;
         }
         .notice-container ul{
             display: grid;
@@ -736,7 +744,58 @@
             display: grid;
             grid-template-columns: repeat(6,1fr);
         }
-        
+        .megainfo-nav ul li{
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+        }
+        .megainfo-nav ul li .img-box a{
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+        .bg-mega01 a{
+            background-image: url(./images/ico-megainfo01.png);
+        }
+        .bg-mega02 a{
+            background-image: url(./images/ico-megainfo02.png);
+        }
+        .bg-mega03 a{
+            background-image: url(./images/ico-megainfo03.png);
+        }
+        .bg-mega04 a{
+            background-image: url(./images/ico-megainfo04.png);
+        }
+        .bg-mega05 a{
+            background-image: url(./images/ico-megainfo05.png);
+        }
+        .bg-mega06 a{
+            background-image: url(./images/ico-megainfo06.png);
+        }
+        .megainfo-nav ul li p{
+            text-align: center;
+        }
+        .banner-bottom .container .img-box{
+            position: relative;
+        }
+        .footer-nav{
+            float: left;
+        }
+        .footer-nav li{
+            display: inline-block;
+            margin-right: 1em;
+            color: #999;
+        }
+        .footer-nav li strong{
+            color: #000;
+        }
+        .cinema-search{
+            float: right;
+            color: #ccc;
+        }
         
 
 
@@ -950,6 +1009,13 @@
             .notice-container ul li.notice-tit{
                 padding-left: 0;
             }
+            .megainfo-nav ul li .img-box a{
+                width: 50px;
+                height: 50px;
+            }
+            .megainfo-nav ul li p{
+                display: none;
+            }
         }       
 
         @media (max-width:640px){
@@ -1006,6 +1072,10 @@
             }
             .notice-container ul li.write-date{
                 display: none;
+            }
+            .megainfo-nav ul li .img-box a{
+                width: 40px;
+                height: 40px;
             }
         }
     </style>
@@ -2653,37 +2723,62 @@
             <div class="container megainfo-nav">
                 <ul>
                     <li>
-                        <div class="img-box"><a href="#"><img src="./images/ico-megainfo01.png" alt="고객센터" title="고객센터"></a></div>
+                        <div class="img-box bg-mega01" title="고객센터"><a href="#"></a></div>
                         <p><a href="#">고객센터</a></p>
                     </li>
                     <li>
-                        <div class="img-box"><a href="#"><img src="./images/ico-megainfo02.png" alt="자주 묻는 질문" title="자주 묻는 질문"></a></div>
+                        <div class="img-box bg-mega02" title="자주 묻는 질문"><a href="#"></a></div>
                         <p><a href="#">자주 묻는 질문</a></p>
                     </li>
                     <li>
-                        <div class="img-box"><a href="#"><img src="./images/ico-megainfo03.png" alt="1:1 문의" title="1:1 문의"></a></div>
+                        <div class="img-box bg-mega03" title="1:1 문의"><a href="#"></a></div>
                         <p><a href="#">1:1 문의</a></p>
                     </li>
                     <li>
-                        <div class="img-box"><a href="#"><img src="./images/ico-megainfo04.png" alt="단체/대관문의" title="단체/대관문의"></a></div>
+                        <div class="img-box bg-mega04" title="단체/대관문의"><a href="#"></a></div>
                         <p><a href="#">단체/대관문의</a></p>
                     </li>
                     <li>
-                        <div class="img-box"><a href="#"><img src="./images/ico-megainfo05.png" alt="분실물 문의/접수" title="분실물 문의/접수"></a></div>
+                        <div class="img-box bg-mega05" title="분실물 문의/접수"><a href="#"></a></div>
                         <p><a href="#">분실물 문의/접수</a></p>
                     </li>
                     <li>
-                        <div class="img-box"><a href="#"><img src="./images/ico-megainfo06.png" alt="더 부티크 프라이빗 대관예매" title="더 부티크 프라이빗 대관예매"></a></div>
+                        <div class="img-box bg-mega06" title="더 부티크 프라이빗 대관예매"><a href="#"></a></div>
                         <p><a href="#">더 부티크 프라이빗<br>대관예매</a></p>
                     </li>
                 </ul>
             </div>
         </section>
         <section class="sec banner-bottom">
-            <div class="container"></div>
+            <div class="container">
+                <div class="img-box">
+                    <a href="#"><img src="./images/banner-bottom.jpg" alt="현대해상3"></a>
+                    <div class="ad">AD</div>
+                </div>
+            </div>
         </section>
         <footer class="footer">
-            <div class="container"></div>
+            <div class="container">
+                <div class="in clearfix">
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="#">회사소개</a></li>
+                            <li><a href="#">인사채용</a></li>
+                            <li><a href="#">사회공헌</a></li>
+                            <li><a href="#">제휴/광고/부대사업문의</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">위치기반서비스 이용약관</a></li>
+                            <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                            <li><a href="#">윤리경영</a></li>
+                        </ul>
+                    </div>
+                    <div class="cinema-search">
+                        <i class="fas fa-search"></i>
+                        <span>극장찾기</span>
+                    </div>
+                </div>
+                <div class="in"></div>
+            </div>
         </footer>
     </section>
 
@@ -2900,8 +2995,8 @@
             $('#curation-ajax').load('curation.html #curation0' + idxNum);
         }
 
-        
-            
+
+
     </script>
 </body>
 </html>
